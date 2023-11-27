@@ -1,0 +1,16 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button{
+    margin-top: 5px;
+    cursor: pointer;
+   padding: 10px;
+  }
+
+  input{
+    height: 2em;
+    width: 20em;
+  }

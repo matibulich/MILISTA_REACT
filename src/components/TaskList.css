@@ -1,0 +1,57 @@
+
+ul{
+  list-style: none;
+  padding: 0
+}
+
+li{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5em;
+  border-bottom: solid 2px  white;
+}
+
+
+.mostrar_items {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgb(12, 11, 11);
+  min-width: 300px;
+  width: 80%;
+  margin: 0 auto; 
+  margin-top:15px;
+}
+
+.tarea_realizada{
+    color:green;
+  
+    display: flex;
+    justify-content: center;
+    transition: 700ms;
+    text-decoration: line-through
+  }
+  .tarea_no_realizada{
+    color:white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tilde{
+    color:green;
+    cursor: pointer;
+    
+   
+  }
+
+  .cruz{
+    color:red;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+
+  .iconos{
+    font-size: 1em;
+    margin-left:10px
+  }
