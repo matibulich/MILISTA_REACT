@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import  TaskForm  from './TaskForm.jsx';
 import TaskLists from './TaskList.jsx';
+import MensajeComp from './MensajeComp.jsx';
 
 
 
@@ -10,7 +11,7 @@ import TaskLists from './TaskList.jsx';
 
 function App() {
   const [tareas, setTareas] = useState([]); // tareas empieza con el array vacío. (agregarTarea) le suma una nueva tarea 
-
+  const [mensaje, setMensaje] = useState('')
 
 
 
@@ -28,24 +29,27 @@ function App() {
 
 
 
-
-
   useEffect(() => {
+    
+    const fechaActual = new Date();
+    const mensaje = `Buen día hoy es: : ${fechaActual.toLocaleDateString()}`;
+    setMensaje(mensaje);
 
-    localStorage.setItem("tareas", JSON.stringify(tareas))
-  }, [tareas])
+    
+   
+  }, []);
 
 
- 
 
 
 
   return (
     <div>
+      <MensajeComp mensaje= {mensaje} />
       <TaskForm inAgregarTarea={agregarTarea} />     {/* llamamos a la funcion pasada x param y le pasamos (agregarTarea) */}
       <TaskLists tareas={tareas} inBorrarTarea={borrarTarea} inTareaRealizada={tareaRealizada} />
-
-
+      
+     
 
 
     </div>
