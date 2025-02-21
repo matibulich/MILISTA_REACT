@@ -2,5 +2,5 @@
 
 
 deploy:
-milistareact.netlify.app
+https://milistareact.netlify.app
 
